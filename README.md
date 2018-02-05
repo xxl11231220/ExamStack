@@ -1,10 +1,10 @@
 #ExamStack V2.0
 
-### 
+###  
 - 修改management、portal下WEB-INF下配置文件
 - 修改ScoreMarker下scoremaker.properties
 - RabbitMQ版本3.3.4
-- Management-admin 123456 Portal-student 123456
+- Management：admin 123456 Portal：student 123456
 - ScoreMarker可以直接ScoreMarkerWin.java右键运行
 
 ----
@@ -19,7 +19,7 @@
 
 在[Exam++](http://www.examstack.com)考试系统第一版的基础上，我们对[ExamStack V2.0](http://www.examstack.com)进行了大量代码重构，同时也对数据模型做了部分调整。为了减小学员考试交卷时大量并发带来的系统风险，我们尝试采用成熟的消息队列框架RabbitMQ来解决这一问题，因此我们的数据库以及系统的架构同第一版相比，发生了不小的变化。
 
-![ExamStack](http://www.examstack.com/repository/overview.png)
+[comment]:![ExamStack](http://www.examstack.com/repository/overview.png)
 
 ### 1.2 部署要点
 

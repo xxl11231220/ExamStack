@@ -46,7 +46,7 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		}
 		
 		//check Kaptcha
-		checkValidateCode(request);
+//		checkValidateCode(request);
 		
 		String username = this.obtainUsername(request);
 		String password = this.obtainPassword(request);

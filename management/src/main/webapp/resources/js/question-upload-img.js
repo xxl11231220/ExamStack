@@ -74,7 +74,7 @@ var question_upload_img = {
 			        		
 			        		var displayImg = $(".question-content").find(".diaplay-img");
 			        		if(displayImg.length  == 0){
-			        			$(".question-content textarea").after("<a href=\"..\\" + fileurl + "\" class=\"diaplay-img display-content-img\" target=\"_blank\" data-url=\"" + fileurl + "\">预览图片</a>");
+			        			$(".question-content textarea").after("<a href=\".." + fileurl + "\" class=\"diaplay-img display-content-img\" target=\"_blank\" data-url=\"" + fileurl + "\">预览图片</a>");
 			        		}else{
 			        			displayImg.attr("href", fileurl);
 			        		}
@@ -84,7 +84,7 @@ var question_upload_img = {
 			        		var displayImg = thisopt.find(".diaplay-img");
 			        		
 			        		if(displayImg.length  == 0){
-			        			thisopt.find("input.form-question-opt-item").after("<a href=\"..\\" + fileurl + "\" class=\"diaplay-img display-opt-img\" target=\"_blank\" data-url=\"" + fileurl + "\">预览图片</a>");
+			        			thisopt.find("input.form-question-opt-item").after("<a href=\".." + fileurl + "\" class=\"diaplay-img display-opt-img\" target=\"_blank\" data-url=\"" + fileurl + "\">预览图片</a>");
 			        		}else{
 			        			displayImg.attr("href", fileurl);
 			        		}

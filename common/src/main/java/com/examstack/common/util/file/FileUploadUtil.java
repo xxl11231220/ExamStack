@@ -127,10 +127,11 @@ public class FileUploadUtil {
 			HttpServletResponse response, String username) throws Exception{
 		List<String> filePathList = new ArrayList<String>();
 
-		String strPath = ",webapps,files,question," + username;
+		String strPath = ",files,question," + username;
 		
-		String filepath = System.getProperty("catalina.base") + strPath.replace(',', File.separatorChar);
-		
+//		String filepath = System.getProperty("catalina.base") + strPath.replace(',', File.separatorChar);
+		String filepath = FileUploadUtil.class.getClassLoader().getResource("").toURI().getPath().substring(1).replace("/WEB-INF/classes/", "").replaceAll("/", "\\\\") + strPath.replace(',', File.separatorChar);
+
 		MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
 		Map<String, MultipartFile> fileMap = multipartRequest.getFileMap();
 		String fileName = null;
@@ -144,7 +145,7 @@ public class FileUploadUtil {
 			fileName = String.valueOf(new Date().getTime()) + file_type;
 			String newfilepath;
 			newfilepath = filepath + File.separatorChar + fileName;
-			String filepathUrl = "files" + File.separatorChar + "question" + File.separatorChar + username + File.separatorChar + fileName;
+			String filepathUrl = request.getSession().getServletContext().getContextPath() + File.separator + "files" + File.separatorChar + "question" + File.separatorChar + username + File.separatorChar + fileName;
 
 			System.out.println("newfilepath=" + newfilepath);
 			File dest = new File(filepath);
@@ -158,7 +159,8 @@ public class FileUploadUtil {
 			try {
 
 				log.info("start upload file: " + fileName);
-				FileCopyUtils.copy(mf.getBytes(), uploadFile);
+//				FileCopyUtils.copy(mf.getBytes(), uploadFile);
+				mf.transferTo(uploadFile);
 			} catch (IOException e) {
 			// TODO Auto-generated catch block
 			// e.printStackTrace();

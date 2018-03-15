@@ -5,7 +5,8 @@
 - 修改ScoreMarker下scoremaker.properties
 - RabbitMQ版本3.3.4
 - Management：admin 123456 Portal：student 123456
-- ScoreMarker可以直接ScoreMarkerWin.java右键运行
+- 启动rabbitMQ服务，访问http://localhost:15672，guest guest
+- ScoreMarker可以直接ScoreMarkerWin.java右键运行，建立一个MQ consumer
 
 ----
 

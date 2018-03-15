@@ -64,7 +64,7 @@ public class ScoreMarkConfig {
 		String propertyFilePath = Constants.CONFIG_PATH + File.separator 	+ "config" + File.separator + "scoremaker.properties";
 		File f = new File(propertyFilePath);
 		if (!f.exists()){
-			propertyFilePath = "config" + File.separator + "scoremaker.properties";
+			propertyFilePath = "scoreMarker"+ File.separator +"config" + File.separator + "scoremaker.properties";
 		}
 		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
 		org.springframework.core.io.Resource[] properties = new FileSystemResource[] { new FileSystemResource(propertyFilePath) };

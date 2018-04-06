@@ -29,7 +29,7 @@ public class ExamAction {
 		ExamPaper paper = examPaperService.getExamPaperById(id);
 		return paper;
 	}
-	
+	//接收restTemplate发出的请求,更新计算得分、结果等数据到exam_history
 	@RequestMapping(value = "/api/answersheet", method = RequestMethod.POST)
 	public @ResponseBody Message submitAnswerSheet(@RequestBody AnswerSheet answerSheet){
 

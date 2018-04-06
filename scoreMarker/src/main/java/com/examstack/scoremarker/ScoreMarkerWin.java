@@ -74,8 +74,12 @@ public class ScoreMarkerWin {
     	scoreMarkerWin.init();
     	scoreMarkerWin.run();
     }
-    
-    protected void run() {
+
+	/**
+	 * RabbitMQ api consumer阻塞的从queue获取answerSheet，计算
+	 * 得分、结果等数据
+	 */
+	protected void run() {
     	while(!stop){
     		try {
     			LOGGER.info("scoreMaker checking next delivery from message queue");

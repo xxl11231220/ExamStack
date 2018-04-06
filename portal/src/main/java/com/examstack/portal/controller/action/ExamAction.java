@@ -85,7 +85,12 @@ public class ExamAction {
 		
 		return exam;
 	}
-	
+
+	/**
+	 * 保存answerSheet到RabbitMQ中的队列
+	 * @param answerSheet 前端收集的answerSheet
+	 * @return
+	 */
 	@RequestMapping(value = "/student/exam-submit", method = RequestMethod.POST)
 	public @ResponseBody Message finishExam(@RequestBody AnswerSheet answerSheet) {
 

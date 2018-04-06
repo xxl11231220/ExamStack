@@ -4,8 +4,8 @@
 - 修改management、portal下WEB-INF下配置文件
 - 修改ScoreMarker下scoremaker.properties
 - RabbitMQ版本3.3.4
-- Management：admin 123456 Portal：student 123456
-- 启动rabbitMQ服务，访问http://localhost:15672，guest guest
+- 运行management：admin 123456 portal：student 123456
+- 启动rabbitMQ服务，访问http://localhost:15672，guest guest 增加admin admin
 - ScoreMarker可以直接ScoreMarkerWin.java右键运行，建立一个MQ consumer
 
 ----

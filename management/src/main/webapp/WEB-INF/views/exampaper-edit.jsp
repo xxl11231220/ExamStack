@@ -171,6 +171,7 @@ request.setAttribute("leftMenuId",list[3]);
 					</div>
 				</div>
 			</div>
+			<!--选题弹窗-->
 			<div class="modal fade" id="question-selector-modal">
 						  <div class="modal-dialog modal-lg">
 						    <div class="modal-content">
@@ -179,6 +180,7 @@ request.setAttribute("leftMenuId",list[3]);
 						        <h4 class="modal-title">选择试题添加到试卷中</h4>
 						      </div>
 						      <div class="modal-body">
+								  <!--嵌入iframe题目列表-->
 						        <iframe  id="qt-selector-iframe" src="<%=list[1]%>/question/question-list/filterdialog-0-0-0-0-1.html" width="100%"></iframe>
 						      </div>
 						      <div class="modal-footer">

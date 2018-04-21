@@ -346,6 +346,7 @@ var examing = {
 		bindAddQustionToPaper : function bindAddQustionToPaper(){
 			$("button#add-list-to-exampaper").click(function() {
 				var values = new Array();
+				//取子窗口iframe里的已选择的checkbox
 				var checkboxs = $("#qt-selector-iframe").contents().find("table input:checked");
 				$.each(checkboxs, function() {
 					var id = $(this).val();

@@ -71,7 +71,7 @@ var question_list = {
 	},
 	
 	preventDuplicateQuestion : function(){
-		
+		//取父窗口里的元素
 		var exampaper = $(window.parent.document.getElementById('exampaper-body'));
 		var questionIdList = exampaper.find(".question-id");
 		var questionIdArray = new Array();
